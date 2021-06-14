@@ -16,23 +16,3 @@ arrowS.forEach(function(arrow) {
     });
 });
 
-/*
-arrowS.forEach(function(toggler) {
-    toggler.addEventListener("click", function() {
-        let arrowS=this;
-        arrowS.classList.toggle("active");
-        document.getElementById("anchor").style.fontWeight = "700";
-        document.getElementById("dropdown").setAttribute("style","display: block; transition: ease 2s;");
-    });
-
-    arrowS.forEach( function(collapse) {
-        toggler.addEventListener("click", function() {    
-            if (collapse !== toggler) {
-                document.getElementById("anchor").style.fontWeight = "400";
-                document.getElementById("dropdown").setAttribute("style","display: none; transition: ease 2s;");
-                arrowS.classList.toggle("active"); 
-            }
-        });
-    });
-});
-*/
