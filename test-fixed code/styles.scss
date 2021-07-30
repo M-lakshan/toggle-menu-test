@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+    background-color: darkslategrey;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 75vw;
+    margin: 10%;
+    margin-top: 100px;
+    padding: 0%;
+}
+
+.tab {
+    display: block;
+    align-content: space-between;
+}
+
+.anchor {
+    font-weight: 400;
+    transition: 1200ms ease;
+}
+.anchor.active {
+    font-weight: 700;
+    transition: 1200ms ease;
+}
+
+.clickingArrow {
+    cursor: pointer;
+    transition: 800ms;
+    padding: 0% 20px 0% 20px;
+    transform: rotate(360deg);
+}
+.clickingArrow.active {
+    cursor: pointer;
+    transition: 800ms;
+    padding: 0% 20px 0% 20px;
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    display: none;
+    transition: dropdownOff ease 2s;
+}
+.dropdown.active {
+    display: block;
+    transition: dropdownOn ease 2s;
+    font-size: smaller;
+}
+    
+@keyframes dropdownOn {
+    0% {
+        display: none;
+    }
+    30% {
+        display: block;
+        opacity: 35%;
+    }
+    70% {
+        display: block;
+        opacity: 75%;
+    }
+    100% {
+        display: block;
+        opacity: 100%;
+    }
+}
+
+@keyframes dropdownOff {
+    100% {
+        display: block;
+        opacity: 100%;
+    }
+    70% {
+        display: block;
+        opacity: 75%;
+    }
+    30% {
+        display: block;
+        opacity: 35%;
+    }
+    0% {
+        display: none;
+    }
+}
