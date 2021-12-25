@@ -1,0 +1,143 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 75vw;
+  margin: 10%;
+  padding: 0%;
+}
+
+.tab {
+  display: block;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.tab #anchor {
+  font-weight: 700;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+}
+
+.tab #anchor.active {
+  font-weight: 400;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+}
+
+.tab #clickingArrow {
+  cursor: pointer;
+  -webkit-transition: 800ms;
+  transition: 800ms;
+  padding: 0% 20px 0% 20px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.tab #clickingArrow.active {
+  cursor: pointer;
+  -webkit-transition: 800ms;
+  transition: 800ms;
+  padding: 0% 20px 0% 20px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.tab #dropdown {
+  -webkit-transition: dropdownOff ease 2s;
+  transition: dropdownOff ease 2s;
+}
+
+.tab #dropdown.active {
+  display: none;
+  -webkit-transition: dropdownOn ease 2s;
+  transition: dropdownOn ease 2s;
+}
+
+@-webkit-keyframes dropdownOn {
+  0% {
+    display: none;
+  }
+  30% {
+    display: block;
+    opacity: 35%;
+  }
+  70% {
+    display: block;
+    opacity: 75%;
+  }
+  100% {
+    display: block;
+    opacity: 100%;
+  }
+}
+
+@keyframes dropdownOn {
+  0% {
+    display: none;
+  }
+  30% {
+    display: block;
+    opacity: 35%;
+  }
+  70% {
+    display: block;
+    opacity: 75%;
+  }
+  100% {
+    display: block;
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes dropdownOff {
+  100% {
+    display: block;
+    opacity: 100%;
+  }
+  70% {
+    display: block;
+    opacity: 75%;
+  }
+  30% {
+    display: block;
+    opacity: 35%;
+  }
+  0% {
+    display: none;
+  }
+}
+
+@keyframes dropdownOff {
+  100% {
+    display: block;
+    opacity: 100%;
+  }
+  70% {
+    display: block;
+    opacity: 75%;
+  }
+  30% {
+    display: block;
+    opacity: 35%;
+  }
+  0% {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
